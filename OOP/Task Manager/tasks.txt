@@ -1,0 +1,6 @@
+description1|OPEN|1
+description2|IN_PROGRESS|4
+description4|OPEN|3
+description3|OPEN|2
+description5|IN_PROGRESS|1
+description6|CLOSED|3
