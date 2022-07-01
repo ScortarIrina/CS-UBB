@@ -1,0 +1,8 @@
+1|Ana|email1|2023|AI|coord3
+2|Cristi|email2|2022|Economy|coord2
+3|Dan|email3|2022|History|-
+4|Irina|email4|2024|Geography|coord1
+5|Andrei|email5|2025|Databases|-
+6|Andra|email6|2022|AI|1
+7|Mihai|email7|2022|OOP|2
+8|Bogdan|email8|2023|OS|3
