@@ -1,0 +1,5 @@
+main.cpp|not_revised|member1|-
+domain.h|not_revised|member2|-
+gui.cpp|revised|member1|member2
+hello.txt|revised|member3|member1
+gui.ui|not_revised|member1|-
