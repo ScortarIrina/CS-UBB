@@ -376,7 +376,7 @@ WHERE first_name LIKE '%Delete%';
 
     -- The dancer Irina Scortar (id = 1) makes the inventary only of her costumes and her shoes
     -- first 4 are her costumes, next 3 are her shoes
-SELECT C.costume_id
+SELECT C.costume_id as item_id
 FROM Costume C
 WHERE C.dancer_id = 1
 UNION ALL
