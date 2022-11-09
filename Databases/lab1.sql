@@ -24,6 +24,8 @@ CREATE TABLE Dancer(
     class VARCHAR(5),
     no_prizes INT DEFAULT 0
 );
+ALTER TABLE Dancer
+DROP column fans
 
 CREATE TABLE Instructor(
     instructor_id INT PRIMARY KEY NOT NULL,
@@ -39,6 +41,8 @@ CREATE TABLE DanceGroup(
     no_participants INT,
     level_group VARCHAR(10)
 );
+ALTER TABLE DanceGroup
+drop column camp_id 
 
 ALTER TABLE DanceGroup
 ALTER COLUMN level_group varchar(15);
@@ -79,17 +83,32 @@ CREATE TABLE Costume(
 ALTER TABLE Costume
 ALTER COLUMN size char(3);
 
+
+/*
+    1(dancer):n(costumes)
+    A dancer can have multiple pairs of shoes but a pair of shoes can be worn by only one dancer.
+*/
+CREATE TABLE Shoes(
+    shoes_id INT,
+    dancer_id INT FOREIGN KEY REFERENCES Dancer(dancer_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    size CHAR(3),
+    brand CHAR(20),
+    PRIMARY KEY(shoes_id, dancer_id)
+);
+
+
 /*
     1(group):n(camps)
     One group can go to more camps.
 */
 CREATE TABLE TrainingCamp(
-    camp_id INT PRIMARY KEY NOT NULL,
+    camp_id INT,
     group_id INT FOREIGN KEY REFERENCES DanceGroup(group_id) ON DELETE CASCADE ON UPDATE CASCADE,
-    duration_days TINYINT
+    duration_days TINYINT,
+    camp_theme varchar(50),
+    PRIMARY KEY(camp_id, group_id)
 );
-ALTER TABLE TrainingCamp
-alter column camp_theme varchar(50);
+
 
 /*
     1(dancer):n(prizes)
@@ -137,6 +156,7 @@ CREATE TABLE Competition(
     date_competiton DATE,
     organiser VARCHAR(20),
     no_participants TINYINT DEFAULT 50,
+    ranking varchar(20),
     PRIMARY KEY(competition_id)
 );
 alter table Competition
@@ -164,4 +184,15 @@ CREATE TABLE Workshop(
     instructor_id INT FOREIGN KEY REFERENCES Instructor(instructor_id) ON DELETE CASCADE ON UPDATE CASCADE,
     topic VARCHAR(20),
     PRIMARY KEY(workshop_id, instructor_id)
+);
+
+/*
+    m(conferences):n(dancers)
+    A conference can have more instructors and an instructor can take part in more conferences.
+*/
+CREATE TABLE Conference(
+    conference_id INT DEFAULT 0,
+    instructor_id INT FOREIGN key REFERENCES Instructor(instructor_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    presentation_name VARCHAR(30),
+    PRIMARY KEY(conference_id, instructor_id)
 );
