@@ -1,5 +1,3 @@
-% academic info: 4Y110802
-
 % Given a numerical linear list consisting of integers, substitute all the occurrences of the maximum element
 % of the list with another list.
 
