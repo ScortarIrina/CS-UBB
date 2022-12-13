@@ -3,13 +3,13 @@ USE DanceStudio
 -- generate a random string
 GO
 IF EXISTS (SELECT [name] FROM sys.objects
-           WHERE object_id = OBJECT_ID('generateRandomString'))
+	WHERE object_id = OBJECT_ID('generateRandomString'))
 BEGIN
     DROP PROCEDURE generateRandomString;
 END
 
 IF EXISTS (SELECT [name] FROM sys.objects
-			WHERE object_id = OBJECT_ID('generateRandomDataForTable'))
+	WHERE object_id = OBJECT_ID('generateRandomDataForTable'))
 BEGIN
 	DROP PROCEDURE generateRandomDataForTable
 END
@@ -77,40 +77,40 @@ BEGIN
 					FROM INFORMATION_SCHEMA.CONSTRAINT_COLUMN_USAGE C
 					WHERE C.CONSTRAINT_NAME like 'FK%' AND @columnName = C.COLUMN_NAME AND @tableName = C.TABLE_NAME
 				) BEGIN
-						-- get the name of the referenced table and the name of the referenced column
-						DECLARE @referencedTable VARCHAR(50)
-						DECLARE @referencedColumn VARCHAR(50)
-						DECLARE @result TABLE([tableName] VARCHAR(50), [columnName] VARCHAR(50))
-						INSERT INTO @result SELECT OBJECT_NAME (f.referenced_object_id) AS referenced_table_name,
-						COL_NAME(fc.referenced_object_id, fc.referenced_column_id) AS referenced_column_name
-						FROM sys.foreign_keys AS f
-						INNER JOIN sys.foreign_key_columns AS fc ON f.object_id = fc.constraint_object_id
-						WHERE fc.parent_object_id = OBJECT_ID(@tableName) AND COL_NAME(fc.parent_object_id, fc.parent_column_id) = @columnName
+					-- get the name of the referenced table and the name of the referenced column
+					DECLARE @referencedTable VARCHAR(50)
+					DECLARE @referencedColumn VARCHAR(50)
+					DECLARE @result TABLE([tableName] VARCHAR(50), [columnName] VARCHAR(50))
+					INSERT INTO @result SELECT OBJECT_NAME (f.referenced_object_id) AS referenced_table_name,
+					COL_NAME(fc.referenced_object_id, fc.referenced_column_id) AS referenced_column_name
+					FROM sys.foreign_keys AS f
+					INNER JOIN sys.foreign_key_columns AS fc ON f.object_id = fc.constraint_object_id
+					WHERE fc.parent_object_id = OBJECT_ID(@tableName) AND COL_NAME(fc.parent_object_id, fc.parent_column_id) = @columnName
 
-						SET @referencedTable = (SELECT TOP 1 [tableName] FROM @result)
-						SET @referencedColumn = (SELECT TOP 1 [columnName] FROM @result)
+					SET @referencedTable = (SELECT TOP 1 [tableName] FROM @result)
+					SET @referencedColumn = (SELECT TOP 1 [columnName] FROM @result)
 						
-						-- empty the table, otherwise it will always have at the top the first table and column found
-						DELETE FROM @result
+					-- empty the table, otherwise it will always have at the top the first table and column found
+					DELETE FROM @result
 
-						-- int case
-						IF @dataType = 'int' BEGIN
-								-- get a random value from the referenced table
-								DECLARE @getRandomFK NVARCHAR(1000)
-								SET @getRandomFK = N'SELECT TOP 1 @intValue = [' + @referencedColumn + '] FROM ' + @referencedTable + ' ORDER BY NEWID()'
-								EXEC sp_executesql @getRandomFK, N'@intValue INT OUTPUT', @intValue OUTPUT
-								SET @insertQuery = @insertQuery + CAST(@intValue AS NVARCHAR(10)) + ','
-							END
-						ELSE
-							-- string case
-							IF @dataType = 'varchar' BEGIN
-									-- get a random value from the values in the referenced table
-									DECLARE @getStringQuery NVARCHAR(200)
-									SET @getStringQuery = N'SELECT TOP 1 @stringValue = ['  + @referencedColumn + '] FROM ' + @referencedTable + ' T WHERE ' +
-									@columnName + ' = T.' + @columnName + ' ORDER BY NEWID()'
-									EXEC sp_executesql @getStringQuery, N'@stringValue VARCHAR(50) OUTPUT', @stringValue OUTPUT
-									SET @insertQuery = @insertQuery + '''' + @stringValue + ''','
-								END
+					-- int case
+					IF @dataType = 'int' BEGIN
+							-- get a random value from the referenced table
+							DECLARE @getRandomFK NVARCHAR(1000)
+							SET @getRandomFK = N'SELECT TOP 1 @intValue = [' + @referencedColumn + '] FROM ' + @referencedTable + ' ORDER BY NEWID()'
+							EXEC sp_executesql @getRandomFK, N'@intValue INT OUTPUT', @intValue OUTPUT
+							SET @insertQuery = @insertQuery + CAST(@intValue AS NVARCHAR(10)) + ','
+					END
+					ELSE
+						-- string case
+						IF @dataType = 'varchar' BEGIN
+							-- get a random value from the values in the referenced table
+							DECLARE @getStringQuery NVARCHAR(200)
+							SET @getStringQuery = N'SELECT TOP 1 @stringValue = ['  + @referencedColumn + '] FROM ' + @referencedTable + ' T WHERE ' +
+							@columnName + ' = T.' + @columnName + ' ORDER BY NEWID()'
+							EXEC sp_executesql @getStringQuery, N'@stringValue VARCHAR(50) OUTPUT', @stringValue OUTPUT
+							SET @insertQuery = @insertQuery + '''' + @stringValue + ''','
+						END
 					END
 				ELSE
 					-- not a foreign key, does not depend on another table
