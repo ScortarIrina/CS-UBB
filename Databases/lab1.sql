@@ -25,7 +25,7 @@ CREATE TABLE Dancer(
     no_prizes INT DEFAULT 0
 );
 ALTER TABLE Dancer
-DROP column fans
+ALTER COLUMN class VARCHAR(50)
 
 CREATE TABLE Instructor(
     instructor_id INT PRIMARY KEY NOT NULL,
@@ -35,6 +35,10 @@ CREATE TABLE Instructor(
     style VARCHAR(8),
     phone_no INT
 );
+ALTER TABLE Instructor
+ALTER COLUMN competition_level VARCHAR(50)
+ALTER TABLE Instructor
+ALTER COLUMN style VARCHAR(50)
 
 CREATE TABLE DanceGroup(
     group_id INT PRIMARY KEY NOT NULL,
@@ -75,7 +79,7 @@ CREATE TABLE Sponsors(
 */
 CREATE TABLE Costume(
     costume_id INT,
-    dancer_id INT FOREIGN KEY REFERENCES Dancer(dancer_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    dancer_id INT,
     size CHAR(1),
     PRIMARY KEY(costume_id, dancer_id)
 );
@@ -90,7 +94,7 @@ ALTER COLUMN size char(3);
 */
 CREATE TABLE Shoes(
     shoes_id INT,
-    dancer_id INT FOREIGN KEY REFERENCES Dancer(dancer_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    dancer_id INT,
     size CHAR(3),
     brand CHAR(20),
     PRIMARY KEY(shoes_id, dancer_id)
@@ -196,3 +200,12 @@ CREATE TABLE Conference(
     presentation_name VARCHAR(30),
     PRIMARY KEY(conference_id, instructor_id)
 );
+
+/*
+    1(instructor):n(members)
+*/
+CREATE TABLE Member(
+    member_id INT PRIMARY KEY NOT NULL,
+    instructor_id INT,
+    member_name VARCHAR(50)
+)
