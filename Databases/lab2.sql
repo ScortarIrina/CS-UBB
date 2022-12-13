@@ -282,6 +282,34 @@ VALUES
     (25, 'Ana', 'Pop', 22, NULL, 12),
     (26, 'Andrei', 'Pop', 22, NULL, 13);
 
+INSERT INTO Member
+    (member_id, instructor_id, member_name)
+VALUES
+    (1, 1, 'Irina'),
+    (2, 1, 'Carina'),
+    (3, 2, 'Andra'),
+    (4, 3, 'Daria'),
+    (5, 2, 'Mara'),
+    (6, 4, 'Paul'),
+    (7, 1, 'Mihnea'),
+    (8, 2, 'Arthur'),
+    (9, 4, 'Darius'),
+    (10, 3, 'Alex'),
+    (11, 5, 'Raluca'),
+    (12, 5, 'Rares'),
+    (13, 3, 'Evelin'),
+    (14, 3, 'Catalin'),
+    (15, 1, 'Andrei'),
+    (16, 2, 'Samira'),
+    (17, 5, 'David'),
+    (18, 5, 'Carla'),
+    (19, 3, 'Maria'),
+    (20, 4, 'Cosmin'),
+    (21, 3, 'Maria'),
+    (22, 2, 'Razvan'),
+    (23, 2, 'Marius'),
+    (24, 1, 'Emma')
+
 
 
 -- *************************** UPDATE ***************************
