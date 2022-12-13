@@ -8,16 +8,19 @@ GO
 CREATE OR ALTER PROCEDURE addToTables (@tableName VARCHAR(50)) AS
 BEGIN
 
-    IF @tableName IN (SELECT [Name] FROM [Tables]) BEGIN
+	-- the table was already added
+    IF @tableName IN (SELECT [Name] FROM [Tables]) BEGIN			
         PRINT 'Table already present in tables'
         RETURN
     END
 
+	-- there is no such table in the database
     IF @tableName NOT IN (SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES) BEGIN
         PRINT 'Table not present in the database'
         RETURN
     END
 
+	-- add the table in the tables
     INSERT INTO Tables (Name)
     VALUES
         (@tableName)
@@ -30,16 +33,19 @@ GO
 CREATE OR ALTER PROCEDURE addToViews (@viewName VARCHAR(50)) AS
 BEGIN
 
+	-- the view was already added
     IF @viewName IN (SELECT Name from Views) BEGIN
         PRINT 'View already present in views'
         RETURN
     END
 
+	-- there is no such view in the database
     IF @viewName NOT IN (SELECT TABLE_NAME FROM INFORMATION_SCHEMA.VIEWS) BEGIN
         PRINT 'View not present in database'
         RETURN
     END
 
+	-- add view to the table
     INSERT INTO Views (Name)
     VALUES
         (@viewName)
@@ -52,11 +58,13 @@ GO
 CREATE OR ALTER PROCEDURE addToTests (@testName VARCHAR(50)) AS
 BEGIN
 
+	-- the test was already added
     IF @testName IN (SELECT Name from Tests) BEGIN
         PRINT 'Test already present in Tests'
         RETURN
     END
 
+	-- add the test to the table
     INSERT INTO Tests (Name)
     VALUES
         (@testName)
@@ -69,16 +77,19 @@ GO
 CREATE OR ALTER PROCEDURE connectTableToTest (@tableName VARCHAR(50), @testName VARCHAR(50), @rows INT, @pos INT) AS
 BEGIN
 
+	-- there is no such table in Tables
 	IF @tableName NOT IN (SELECT Name FROM Tables) BEGIN
         PRINT 'Table not present in Tables'
         RETURN
     END
 
+	-- there is no such test in Tests 
 	IF @testName NOT IN (SELECT Name FROM Tests) BEGIN
         PRINT 'Test not present in Test'
         RETURN
     END
 
+	-- duplicate position
 	IF EXISTS( 
 		SELECT * 
 		FROM TestTables T1 JOIN Tests T2 ON T1.TestID = T2.TestID
@@ -88,6 +99,7 @@ BEGIN
         RETURN
     END
 
+	-- insert data into TestTables
 	INSERT INTO TestTables 
 		(TestID, TableID, NoOfRows, Position) 
 	VALUES (
@@ -105,16 +117,19 @@ GO
 CREATE OR ALTER PROCEDURE connectViewToTest (@viewName VARCHAR(50), @testName VARCHAR(50)) AS
 BEGIN
 
+	-- there is no such view in Views
 	IF @viewName NOT IN (SELECT Name FROM Views) BEGIN
         PRINT 'View not present in Views'
         RETURN
     END
 
+	-- there is no such test in Tests
 	IF @testName NOT IN (Select Name FROM Tests) BEGIN
         PRINT 'Test not present in Tests'
         RETURN
     END
 
+	-- insert data into TestViews
 	INSERT INTO TestViews 
 		(TestID, ViewID)
 	VALUES(
@@ -131,6 +146,7 @@ GO
 CREATE OR ALTER PROCEDURE deleteDataFromTable (@tableID INT) AS
 BEGIN
 
+	-- there is no such table in tables
 	IF @tableID NOT IN (SELECT [TableID] FROM [Tables]) BEGIN
 		PRINT 'Table not present in Tables.'
 		RETURN
@@ -151,6 +167,7 @@ GO
 CREATE OR ALTER PROCEDURE deleteDataFromAllTables (@testID INT) AS
 BEGIN
 
+	-- no such test in Tests table
 	IF @testID NOT IN (SELECT [TestID] FROM [Tests]) BEGIN
 		PRINT 'Test not present in Tests.'
 		RETURN
@@ -230,6 +247,7 @@ GO
 CREATE OR ALTER PROCEDURE insertDataIntoAllTables (@testRunID INT, @testID INT) AS
 BEGIN
 
+	
 	IF @testID NOT IN (SELECT [TestID] FROM [Tests]) BEGIN
 		PRINT 'Test not present in Tests.'
 		RETURN
@@ -400,18 +418,19 @@ END
 
 
 ------------------------------------------ VIEWS ------------------------------------------
+
 -- a view with a SELECT statement operating on one table
 GO
-CREATE OR ALTER VIEW dancersOlderThan15 AS
-	SELECT D.first_name, D.last_name, D.age
+CREATE OR ALTER VIEW dancersWithEvenID AS
+	SELECT D.dancer_id, D.first_name, D.last_name
 	FROM Dancer D
-	WHERE D.age > 15
+	WHERE D.dancer_id % 2 = 0
 
 
 --  a view with a SELECT statement operating on at least 2 tables
 GO
 CREATE OR ALTER VIEW instructorsAndWorkshops AS
-	SELECT I.first_name, I.last_name, W.instructor_id
+	SELECT I.first_name, I.last_name, W.instructor_id, W.workshop_id
 	FROM Instructor I INNER JOIN Workshop W on W.instructor_id = I.[instructor_id]
 
 
@@ -460,11 +479,11 @@ EXEC connectTableToTest 'Costume', 'Test1', 50, 5
 -- a table with a single-column primary key 
 -- a view with a SELECT statement operating on one table
 
-EXEC addToViews 'dancersOlderThan15'
+EXEC addToViews 'dancersWithEvenID'
 EXEC addToTests 'Test2'
 -- EXEC addToTables 'Dancer'
 EXEC connectTableToTest 'Dancer', 'Test2', 100, 1
-EXEC connectViewToTest 'dancersOlderThan15', 'Test2'
+EXEC connectViewToTest 'dancersWithEvenID', 'Test2'
 
 
 -- third test
@@ -473,10 +492,10 @@ EXEC connectViewToTest 'dancersOlderThan15', 'Test2'
 
 EXEC addToTests 'Test3'
 -- EXEC addToTables 'Instructor'
-EXEC connectTableToTest 'Instructor', 'Test3', 500, 1
+EXEC connectTableToTest 'Instructor', 'Test3', 100, 1
 
 EXEC addToTables 'Workshop'
-EXEC connectTableToTest 'Workshop', 'Test3', 500, 2
+EXEC connectTableToTest 'Workshop', 'Test3', 100, 2
 
 EXEC addToViews 'instructorsAndWorkshops'
 EXEC connectViewToTest 'instructorsAndWorkshops', 'Test3'
