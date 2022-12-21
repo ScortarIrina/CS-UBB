@@ -1,0 +1,10 @@
+C++ Pointers - Finally Understand Pointers,Caleb Curry,15:56,3400,https://www.youtube.com/watch?v=rtgwvkaYt1A
+Stack vs Heap Memory in C++,The Cherno,19:30,31000,https://www.youtube.com/watch?v=wJ1L2nSIV1s
+The NEW Keyword in C++,The Cherno,10:52,7200,https://www.youtube.com/watch?v=NUZdUSqsCs4
+Const Member Function In C++,CppNuts,4:49,499,https://www.youtube.com/watch?v=MR37gqFEmFA
+First program Hello World,CodeBeauty,26:31,6500,https://www.youtube.com/watch?v=iBG0fN8lY8Y&list=PL43pGnjiVwgQHLPnuH9ch-LhZdwckM8Tq
+How to draw rectangle shape in C++,CodeBeauty,10:53,703,https://www.youtube.com/watch?v=XwQmDmXTxdM&list=PL43pGnjiVwgQHLPnuH9ch-LhZdwckM8Tq&index=18
+Operator Overloading In C++,CppNuts,13:49,462,https://www.youtube.com/watch?v=DVMZPOt816E&list=PLk6CEY9XxSIAUeZYJYOOwHGr1XZKW6PPG
+SMART POINTERS in C++,CodeBeauty,25:56,1600,https://www.youtube.com/watch?v=e2LMAgoqY_k
+Qt Tutorial : C++ Notepad App,Derek Banas,38:17,4900,https://www.youtube.com/watch?v=I96uPDifZ1w
+How to Run C and C++ Programs on VS code?,Mr About Tech,8:34,9000,https://www.youtube.com/watch?v=Ubfgi4NoTPk
