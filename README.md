@@ -9,8 +9,6 @@ Semester 2
 [Graph Algorithms](https://github.com/ScortarIrina/CS-UBB/tree/main/GraphAlgo)
 
 
-
-
 Semester 3
 
 [Databases](https://github.com/ScortarIrina/CS-UBB/tree/main/Databases)
