@@ -1,11 +1,11 @@
 % In a study of the size of varous computer systems, the random variable X, the number of files % stored (in hundreds of thousands), is considered. This data is obtained:
 
 %	 7     7    4    5    9    9
-%	 4   12    8    1    8    7
-%	 3   13    2    1   17   7
-%	12    5    6    2    1   13
-%	14  10    2    4    9   11 
-%	  3    5   12   6   10   7
+%	 4    12    8    1    8    7
+%	 3    13    2    1   17    7
+%	12     5    6    2    1   13
+%	14    10    2    4    9   11 
+%	 3     5   12    6   10    7
 
 % a) Assuming that past experience indicates that σ = 5, find a 100(1−α)% confidence interval for % the average number of files stored.
 
