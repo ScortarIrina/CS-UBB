@@ -2,7 +2,7 @@
 
 % a. Bernoulli Distribution Bern(p), with parameter p ∈ (0, 1): 
 %                     X = ( 0      1)
-%( 1-p     p) 
+%     ( 1-p     p) 
 
 
 clear
