@@ -1,8 +1,8 @@
 % 2. Using a U(0,1) (standard uniform) random number generator, generate the common discrete % probability distributions: 
 
 % a. Bernoulli Distribution Bern(p), with parameter p ∈ (0, 1): 
-%                     X = (   0      1)
-%								          ( 1-p     p) 
+%                     X = ( 0      1)
+%( 1-p     p) 
 
 
 clear
