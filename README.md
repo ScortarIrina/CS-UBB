@@ -1,4 +1,4 @@
-Semester 2
+__Semester 2__
 
 1. [Data Structures and Algorithms](https://github.com/ScortarIrina/CS-UBB/tree/main/DSA)
 
@@ -7,7 +7,7 @@ Semester 2
 3. [Graph Algorithms](https://github.com/ScortarIrina/CS-UBB/tree/main/GraphAlgo)
 
 
-Semester 3
+__Semester 3__
 
 1. [Databases](https://github.com/ScortarIrina/CS-UBB/tree/main/Databases)
 
