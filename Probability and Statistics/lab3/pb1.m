@@ -1,3 +1,5 @@
+% Compute P(X ≤ 0) and P(X ≥ 0) for the normal distribution X ∈ N(μ,σ)
+
 u = input("Please input miu: ");
 o = input("Please input sigma: ");
 
