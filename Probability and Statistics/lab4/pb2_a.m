@@ -6,10 +6,10 @@
 
 
 clear
-p = input(‘give the probability:’);
-N = input(give the number of simulations:’);
-U = rand(1, N);
-X = (U < p);
-U_X = unique(X)
-n_X = hist(X, length(U_X));
-rel_freq =n_X / N
+p = input(‘give the probability:’);             % asking the user for the probability
+N = input(give the number of simulations:’);    % and number of simulations
+U = rand(1, N);                                 % generate a random number between 1 and N
+X = (U < p);                                    % X is a vector
+U_X = unique(X)                                 % keep only the unique values from X
+n_X = hist(X, length(U_X));                     % draw the histogram
+rel_freq = n_X / N
