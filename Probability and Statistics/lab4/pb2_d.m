@@ -1,3 +1,6 @@
+% 2. Using a U(0,1) (standard uniform) random number generator, generate the common discrete probability distributions:
+% d. Pascal Distribution NB(n, p) 
+
 clear
 n = input('n = ');   % number of trials in bino
 p = input('p = ');   % probability
