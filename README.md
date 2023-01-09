@@ -1,3 +1,6 @@
+__Semester 1__
+* [Fundamentals of Programming](https://github.com/ScortarIrina/CS-UBB/tree/main/Fundamentals%20of%20Programming)
+
 __Semester 2__
 
 * [Data Structures and Algorithms](https://github.com/ScortarIrina/CS-UBB/tree/main/DSA)
