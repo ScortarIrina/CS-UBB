@@ -1,4 +1,5 @@
-% Compute P(X ≤ 0) and P(X ≥ 0) for the normal distribution X ∈ N(μ,σ)
+% 1. Let X have one of the following distributions: X ∈ N(μ,σ) (normal), X ∈ T(n) (Student), X ∈ χ2(n), 
+% or X ∈ F(m,n) (Fischer). Compute the following:
 % a) P(X ≤ 0) and P(X ≥ 0); 
 % b)P(−1≤X≤1)andP(X≤−1or X≥1);
 % c) the value xα such that P(X < xα) = α, for α ∈ (0,1) (xα is called the quan- tile of order α);
