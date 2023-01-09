@@ -1,3 +1,6 @@
+% 2. Using a U(0,1) (standard uniform) random number generator, generate the common discrete probability distributions:
+% c. Geometric Distribution Geo(p)
+
 clear
 p = input('p = ');   % probability
 N = input('N = ');   % number of simulations
