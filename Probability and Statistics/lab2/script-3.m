@@ -1,4 +1,3 @@
-% 2. Plot the graphs of the pdf and the cdf of a random variable X having a binomial distribution of parameters n and p (given by the user).
 % A coin is tossed 3 times. Let X denote the number of heads that appear.
 % a) Find the probability distribution function of X. What type of distribution does X have?
 % b) Find the cumulative distribution function of X, FX. c) Find P(X = 0) and P(X ̸= 1).
