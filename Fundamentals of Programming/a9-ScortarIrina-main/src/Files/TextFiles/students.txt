@@ -1,0 +1,10 @@
+412,Sonia,275
+532,Monica,800
+513,Stefan,383
+102,Ana,913
+825,Victor,102
+782,Sonia,630
+861,Tudor,166
+208,Ioana,763
+115,Paul,680
+870,Tudor,930

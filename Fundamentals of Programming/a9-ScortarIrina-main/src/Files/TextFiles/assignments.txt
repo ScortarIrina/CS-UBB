@@ -1,0 +1,10 @@
+640,exceptions,2021-11-10 00:00:00
+798,layered architecture,2021-11-02 00:00:00
+428,layered architecture,2021-11-02 00:00:00
+131,procedural programming,2022-02-16 00:00:00
+822,exceptions,2021-11-10 00:00:00
+867,classes,2022-01-29 00:00:00
+725,command-based ui,2021-11-17 00:00:00
+763,menu-driven ui,2022-01-14 00:00:00
+507,modular programming,2022-02-16 00:00:00
+805,test functions,2021-11-02 00:00:00
