@@ -28,14 +28,11 @@ binocdf(1, 3, 0.5);
 1 - binocdf(1, 3, 0.5);
 
 % f) Write a Matlab code that simulates 3 coin tosses and computes the value of the variable X.
-ans = 0;
-for i = 1:3
-    ans += (rand() <= 0.5);
-endfor
-printf("The result is %d\n", ans);
-
-%N = input("N? ");
-%C = rand(3, N);
-%Y = (C < 0.5);
-%X = sum(Y);
-%hist(X);
+N = input("Number of simulations");
+C = rand(3, N);
+% each column is a simulation
+% each row -> first, second and third coin toss
+Y = C < 0.5;
+X = sum(Y);
+% sums up each column and returns a vector
+hist(X);
