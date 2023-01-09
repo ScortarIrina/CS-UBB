@@ -1,0 +1,1 @@
+student id: 1     name: Irina     group: 916
