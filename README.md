@@ -16,3 +16,15 @@ Semester 3
 [Functional and Logic Programming](https://github.com/ScortarIrina/CS-UBB/tree/main/Functional%20and%20Logic%20Programming)
 
 [Probability and Statistics](https://github.com/ScortarIrina/CS-UBB/tree/main/Probability%20and%20Statistics)
+
+ Markup : * Bullet list
+              * Nested bullet
+                  * Sub-nested bullet etc
+          * Bullet list item 2
+
+-OR-
+
+ Markup : - Bullet list
+              - Nested bullet
+                  - Sub-nested bullet etc
+          - Bullet list item 2 
