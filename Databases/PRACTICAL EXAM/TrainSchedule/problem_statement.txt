@@ -5,13 +5,13 @@ and a list of stations with arrival and departure times in each station. Route n
 represented as hour:minute pairs, e.g., train arrives at 5 pm and leaves at 5:10 pm.
 
 
-__Requirements:__ 
+Requirements:
 
-1. Write an SQL script that creates the corresponding relational data model.
+   1. Write an SQL script that creates the corresponding relational data model.
 
-2. Implement a stored procedure that receives a route, a station, arrival and departure times, and adds the station to the route. 
-   If the station is already on the route, the departure and arrival times are updated.
+   2. Implement a stored procedure that receives a route, a station, arrival and departure times, and adds the station to the route. 
+      If the station is already on the route, the departure and arrival times are updated.
    
-3. Create a view that shows the names of the routes that pass through all the stations.
+   3. Create a view that shows the names of the routes that pass through all the stations.
 
-4. Implement a function that lists the names of the stations with more than R routes, where R is a function parameter.
+   4. Implement a function that lists the names of the stations with more than R routes, where R is a function parameter.
