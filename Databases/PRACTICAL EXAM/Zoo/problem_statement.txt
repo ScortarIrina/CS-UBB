@@ -1,0 +1,19 @@
+Create a database storing data about several Zoos. You will manage zoos, animals, food, visitors and visits.
+Each zoo has an id, an administrator, a name and several animals. An animal has an id, a name and a date of birth; 
+it can eat various foods, the latter consisting of an id and a name. The system stores the daily quota (integer number) 
+for each animal and food, e.g., animal A1 <food F1, 10; food F2, 5>; animal A2 <food F2, 1; food F5, 2>. 
+A visitor is characterised by a personal number (an id), name and age. A visitor can visit several zoos. 
+Such a visit is defined by a unique identifier, a day, the paid price, the visitor’s personal number and the zoo id.
+
+
+Requirements:
+
+  1. Write an SQL script that creates the corresponding relational data model. (4p)
+
+  2. Implement a stored procedure that receives an animal and deletes all the data 
+     about the food quotas for that animal. (1p)
+
+  3. Create a view that shows the ids for the zoos with the smallest number of visits. (2p)
+
+  4. Implement a function that lists the ids of the visitors who went to zoos that have at 
+     least N animals, where N >= 1 is a function parameter. (1p)
