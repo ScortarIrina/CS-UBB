@@ -19,3 +19,5 @@ __Semester 3__
 * [Probability and Statistics](https://github.com/ScortarIrina/CS-UBB/tree/main/Probability%20and%20Statistics)
 
 * [Advanced Programming Methods](https://github.com/ScortarIrina/CS-UBB/tree/main/Advanced%20Programming%20Methods)
+
+* [Computer Networks](https://github.com/ScortarIrina/CS-UBB/tree/main/Computer%20Networks)
