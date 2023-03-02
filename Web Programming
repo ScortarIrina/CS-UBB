@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html>
+<style>
+    table,
+    th,
+    td {
+        border: 2px solid black;
+    }
+
+    html * {
+        font-size: 1em !important;
+        color: #000 !important;
+        font-family: Helvetica-Oblique !important;
+    }
+
+    .shadowbox {
+        width: 15em;
+        border: 1px solid #333;
+        box-shadow: 8px 8px 5px #444;
+        padding: 8px 12px;
+        background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+    }
+
+    .column {
+        float: left;
+        width: 50%;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+</style>
+
+<head>
+    <title>Let's Hike!</title>
+</head>
+
+<body>
+    <h1>The audio element</h1>
+
+    <p>Click on the play button to play a song while reading:</p>
+    <!-- audio -->
+    <audio controls>
+        <source src="/Users/irinascortar/Desktop/University/WebDevelopment/lab1/resources/song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <!-- section -->
+    <section>
+        <h1><u><I>Some info about me</I></u></h1>
+        <p>
+            My name is Irina and I am a second year CS student. I live in Cluj-Napoca, I have 2 dogs and 2 rabbits
+            and I play the piano.
+        </p>
+        <!-- aside -->
+        <aside>
+            <p>
+                Although I like coding, I absolutely love sports. A sport that helps me truly
+                relax (but only mentally) is hiking. <br> Althoungh every hike feels endless when ascending, when I get
+                to the top of the mountain, I feel the happiness (as you can see on my face) and gratitude that I got to
+                experience such a feeling. Mot of my hikes were in the Apuseni Mountains.
+            </p>
+        </aside>
+    </section>
+
+    <!-- main -->
+    <main>
+        <!-- article -->
+        <article>
+            <header>
+                <h1><u><I>Apuseni Mountains</I></u></h1>
+            </header>
+            <p>
+                The Apuseni Mountains is a mountain range in Transylvania, Romania, which belongs to the Western
+                Romanian Carpathians,
+                also called Occidentali in Romanian. Their name translates from Romanian as Mountains "of the sunset",
+                i.e., "western".
+                The highest peak is the Bihor Peak at 1,849 metres (6,066 ft). The Apuseni Mountains have about 400
+                caves.
+            </p>
+        </article>
+
+        <!-- img -->
+        <section>
+            <div class="row">
+                <h1><u><I>Photo gallery</I></u></h1>
+                <div class="column">
+                    <figure>
+                        <img src="/Users/irinascortar/Desktop/University/WebDevelopment/lab1/resources/photo1.jpeg"
+                            height="320">
+                        <figcaption>Piatra Secuiului</figcaption>
+                    </figure>
+                </div>
+                <div class="column">
+                    <figure>
+                        <img src="/Users/irinascortar/Desktop/University/WebDevelopment/lab1/resources/photo3.jpeg"
+                            height="320">
+                        <figcaption>Vlădeasa</figcaption>
+                    </figure>
+                </div>
+                <div class="column">
+                    <figure>
+                        <img src="/Users/irinascortar/Desktop/University/WebDevelopment/lab1/resources/photo7.jpeg"
+                            height="320">
+                        <figcaption>Ceahlău</figcaption>
+                    </figure>
+                </div>
+                <div class="column">
+                    <figure>
+                        <img src="/Users/irinascortar/Desktop/University/WebDevelopment/lab1/resources/photo9.jpeg"
+                            height="320">
+                        <figcaption>Pietrosul Rodnei</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <p>
+        <hr>
+    </p>
+    <div class="row">
+        <div class="column">
+            <!-- table -->
+            <table>
+                <tr>
+                    <th>Peak name</th>
+                    <th>Altitude</th>
+                    <th>County</th>
+                </tr>
+                <tr>
+                    <td>Piatra Secuiului</td>
+                    <td>1128m</td>
+                    <td>Alba</td>
+                </tr>
+                <tr>
+                    <td>Grota Studenților</td>
+                    <td>915m</td>
+                    <td>Alba</td>
+                </tr>
+                <tr>
+                    <td>Piatra lui Lucaci</td>
+                    <td>895m</td>
+                    <td>Cluj</td>
+                </tr>
+                <tr>
+                    <td>Vlădeasa Peak</td>
+                    <td>1836m</td>
+                    <td>Cluj</td>
+                </tr>
+                <tr>
+                    <td>Toaca Peak</td>
+                    <td>1904m</td>
+                    <td>Neamț</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="column">
+            <div class="shadowbox">
+                <!-- hyperlinks -->
+                <p>
+                    If you want to see some videos from my hikes, you can click <a
+                        href="https://youtube.com/shorts/8p2Y5Nlt-YY?feature=share" target="_blank">here</a>
+                    or <a href="https://youtube.com/shorts/4N6O-v2r7mM?feature=share" target="_blank">here.</a>
+                </p>
+            </div>
+            <svg width="200" height="200">
+                <rect x="100" y="100" width="100" height="30" stroke="black" fill="transparent" stroke-width="5" />
+            </svg>
+        </div>
+    </div>
+
+    <p>
+        <hr>
+    </p>
+
+    <div class="row">
+
+        <div class="column">
+            <p>Things to consider when you go hiking:</p>
+            <ul style="list-style-type:disc">
+                <li>the weather is unpredictable, so dress appropriately</li>
+                <li><b><I>layering</I></b> is essential</li>
+                <li>use sun cream when you can see the sun</li>
+                <li>take more water with you that you think you will drink</li>
+                <li>take some snacks with you</li>
+                <li>last but not least...don't forget to enjoy :)</li>
+            </ul>
+        </div>
+
+        <div class="column">
+            <nav>
+                <p>Useful links:</p>
+                <a href="https://www.rei.com/learn/expert-advice/day-hiking-checklist.html" target="_blank">What to
+                    pack</a>,
+                <a href="https://www.weather-forecast.com" target="_blank">Weather forecast</a>
+            </nav>
+            <video width="320" height="240" controls>
+                <source src="/Users/irinascortar/Desktop/University/WebDevelopment/lab1/resources/video.mp4"
+                    type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+    </div>
+
+    <p>
+        <hr>
+    </p>
+
+    <footer>
+        <p>Author: Irina Scortar<br>
+        <a href="mailto:irinascortar@gmail.com">irinascortar@gmail.com</a></p>
+      </footer>
+
+</body>
+</html>
