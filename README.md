@@ -21,3 +21,8 @@ __Semester 3__
 * [Advanced Programming Methods](https://github.com/ScortarIrina/CS-UBB/tree/main/Advanced%20Programming%20Methods)
 
 * [Computer Networks](https://github.com/ScortarIrina/CS-UBB/tree/main/Computer%20Networks)
+
+
+__Semester 4__
+
+* [Web Programming](https://github.com/ScortarIrina/CS-UBB/tree/main/Web%20Programming)
