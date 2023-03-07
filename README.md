@@ -27,5 +27,5 @@ __Semester 4__
 
 * [Web Programming](https://github.com/ScortarIrina/CS-UBB/tree/main/Web%20Programming)
 * [Artificial Intelligence](https://github.com/ScortarIrina/CS-UBB/tree/main/Artificial%20Intelligence)
-* [Systems for Design and Implementation]
-* [Software Engineering]
+* Systems for Design and Implementation
+* Software Engineering
