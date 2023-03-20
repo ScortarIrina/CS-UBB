@@ -1,0 +1,33 @@
+body {
+	background-color: #d0d4e1;
+}
+
+img {
+	height: 50%;
+	width: 50%;
+	opacity: 50%;
+}
+
+img:hover {
+	opacity: 100%;
+}
+
+table, th, td {
+  border: 2px solid black;
+}
+
+table {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #9bacec;
+}
+
+td {
+	text-align: center;
+	width: 30%;
+}
+
+tr:nth-child(even) {
+	background-color: #a1e4fc;
+}
