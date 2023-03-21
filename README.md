@@ -1,6 +1,7 @@
 __Semester 1__
 * [Fundamentals of Programming](https://github.com/ScortarIrina/CS-UBB/tree/main/Fundamentals%20of%20Programming)
 
+
 __Semester 2__
 
 * [Data Structures and Algorithms](https://github.com/ScortarIrina/CS-UBB/tree/main/DSA)
@@ -8,6 +9,7 @@ __Semester 2__
 * [Object Oriented Programming](https://github.com/ScortarIrina/CS-UBB/tree/main/OOP)
 
 * [Graph Algorithms](https://github.com/ScortarIrina/CS-UBB/tree/main/GraphAlgo)
+
 
 
 __Semester 3__
@@ -21,6 +23,7 @@ __Semester 3__
 * [Advanced Programming Methods](https://github.com/ScortarIrina/CS-UBB/tree/main/Advanced%20Programming%20Methods)
 
 * [Computer Networks](https://github.com/ScortarIrina/CS-UBB/tree/main/Computer%20Networks)
+
 
 
 __Semester 4__
