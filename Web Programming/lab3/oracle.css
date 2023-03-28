@@ -1,0 +1,390 @@
+/* body {
+    background-color: rgb(202, 198, 198);
+}
+ */
+.header1 {
+    display: inline-block;
+    text-align: justify;
+    background-color: #363232;
+    width: 170vh;
+}
+
+.headerList li {
+    margin-top: 20px;
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.logo {
+    max-height: 30px;
+}
+
+.search {
+    height: 40px;
+}
+
+.headerText {
+    color: antiquewhite;
+    font-size: 16px;
+}
+
+#helpLabel {
+    background-color: rgb(255, 255, 255);
+    font-family: OracleSansVF, OracleSansVFCyGr, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    height: 36px;
+    line-height: 36px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    margin-bottom: 0px;
+    margin-inline-end: 0px;
+    margin-inline-start: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 30px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    width: 168.53125px;
+}
+
+.sectionOne {
+    box-sizing: border-box;
+    background-image: url("/Users/irinascortar/Desktop/University/WebDevelopment/lab3/resources/backgroud-section-one.png");
+    background-size: 100%;
+    color: rgb(22, 21, 19);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    float: left;
+    font-family: OracleSansVF, OracleSansVFCyGr, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+    font-size: 14.8px;
+    font-weight: 400;
+    height: 180px;
+    justify-content: space-between;
+    line-height: 17.76px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    max-height: 240px;
+    min-height: 180px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    position: relative;
+    width: 100%
+}
+
+.obttns {
+    -webkit-font-smoothing: antialiased;
+    /* -webkit-user-select: none; */
+    align-items: stretch;
+    box-sizing: border-box;
+    color: rgb(22, 21, 19);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: OracleSansVF, OracleSansVFCyGr, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+    font-size: 11.2px;
+    font-weight: 400;
+    height: 53.078125px;
+    justify-content: flex-start;
+    line-height: 13.44px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: -14.4px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    width: 666px;
+}
+
+.idk {
+    -webkit-font-smoothing: antialiased;
+    /* -webkit-user-select: none; */
+    align-content: center;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgb(49, 45, 42);
+    background-image: none;
+    background-origin: padding-box;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto;
+    border-bottom-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(255, 255, 255);
+    border-left-style: none;
+    border-left-width: 0px;
+    border-right-color: rgb(255, 255, 255);
+    border-right-style: none;
+    border-right-width: 0px;
+    border-top-color: rgb(255, 255, 255);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-top-style: none;
+    border-top-width: 0px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    column-gap: 2.744px;
+    cursor: pointer;
+    display: grid;
+    font-family: OracleSansVF, OracleSansVFCyGr, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    grid-auto-flow: column;
+    height: 38.6875px;
+    line-height: 13.44px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    margin-right: 0px;
+    margin-top: 0px;
+    min-height: 38.700001px;
+    padding-bottom: 10.8px;
+    padding-left: 14.4px;
+    padding-right: 45px;
+    padding-top: 10.8px;
+    position: relative;
+    row-gap: 2.744px;
+    text-align: center;
+    text-decoration: none;
+    text-decoration-line: none;
+    width: 191.015625px;
+}
+
+.idk1 {
+    -webkit-font-smoothing: antialiased;
+    /* -webkit-user-select: none; */
+    align-content: center;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgb(49, 45, 42);
+    background-image: none;
+    background-origin: padding-box;
+    /* background-position-x: 0%; */
+    /* background-position-y: 0%; */
+    background-size: auto;
+    border-bottom-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(255, 255, 255);
+    border-left-style: none;
+    border-left-width: 0px;
+    border-right-color: rgb(255, 255, 255);
+    border-right-style: none;
+    border-right-width: 0px;
+    border-top-color: rgb(255, 255, 255);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-top-style: none;
+    border-top-width: 0px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    column-gap: 2.744px;
+    cursor: pointer;
+    display: grid;
+    font-family: OracleSansVF, OracleSansVFCyGr, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+    font-size: 13x;
+    font-weight: 500;
+    grid-auto-flow: column;
+    height: 38.6875px;
+    line-height: 13.44px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    margin-right: 0px;
+    margin-top: 0px;
+    min-height: 38.700001px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    position: relative;
+    row-gap: 2.744px;
+    text-align: center;
+    text-decoration: none;
+    text-decoration-line: none;
+    width: 700px;
+    height: 100px;
+}
+
+.sectionTwo {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    color: rgb(22, 21, 19);
+    display: block;
+    filter: none;
+    font-family: OracleSansVF, OracleSansVFCyGr, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+    font-size: 14.8px;
+    font-weight: 400;
+    height: 508.390625px;
+    line-height: 20.719999px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    opacity: 1;
+    padding-bottom: 48px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 48px;
+    position: relative;
+    width: 714px;
+}
+
+.rw-ctitle {
+    -webkit-font-smoothing: antialiased;
+    align-items: baseline;
+    box-sizing: border-box;
+    /* color: rgb(22, 21, 19); */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-family: OracleSansVF, OracleSansVFCyGr, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    height: 51px;
+    justify-content: space-between;
+    line-height: 22.4px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 32.400002px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    position: relative;
+    width: 666px;
+    z-index: 1;
+}
+
+.ctitle-heading {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    color: rgb(22, 21, 19);
+    display: block;
+    font-family: OracleSansVF, OracleSansVFCyGr, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    height: 36px;
+    line-height: 22.4px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    width: 168.53125px;
+}
+
+.listItem {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    color: rgb(22, 21, 19);
+    display: block;
+    font-family: OracleSansVF, OracleSansVFCyGr, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+    font-size: 14.8px;
+    font-weight: 400;
+    height: 99px;
+    line-height: 20.719999px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 16px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    text-align: left;
+    width: 666px
+}
+
+.rc139head1 {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: block;
+    flex-basis: 0%;
+    flex-grow: 100;
+    flex-shrink: 1;
+    font-family: OracleSansVF, OracleSansVFCyGr, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-weight: 600;
+    height: 21px;
+    letter-spacing: normal;
+    line-height: normal;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 0px;
+    margin-left: 24px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    text-align: left;
+    text-indent: 0px;
+    text-shadow: none;
+    text-transform: none;
+    width: 570px;
+    word-spacing: 0px;
+    writing-mode: horizontal-tb;
+}
