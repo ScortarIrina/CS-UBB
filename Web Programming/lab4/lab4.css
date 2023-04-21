@@ -1,0 +1,19 @@
+#dogTable {
+    border: 1px solid;
+    margin: auto;
+}
+
+#dogTable th, #dogTable td {
+    border: 1px solid;
+    text-align: center;
+    padding: 10px;
+    font-size: larger;
+}
+
+#dogTable th {
+    background-color: #aeffd1
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
