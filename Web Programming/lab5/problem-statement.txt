@@ -6,3 +6,4 @@ a distinct transparent background color or image and having distinct textual and
 on the desktop the desktop should be slided vertically to the bottom of the window and from the top of the window desktop no. 2 
 should slide vertically and occupy the whole browser window. Desktop sliding should be an animated transition and one desktop 
 should not just instantly dissapear and the next desktop be displayed instead.
+ 
