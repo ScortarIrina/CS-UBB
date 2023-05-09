@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add New User</title>
+    <link rel="stylesheet" type="text/css" href="addUser.css">
+</head>
+
+<body>
+<!-- a div containing the create user page-->
+<div class="container">
+    <h1>Create User</h1>
+
+    <!--  form for adding the new user  -->
+    <form action="addUser.php" method="post">
+
+        <!--  input fields for the user  -->
+        <label class="addLabel">
+            <input type="text" name="name" placeholder="Name:">
+        </label> <br>
+        <label class="addLabel">
+            <input type="text" name="username" placeholder="Username:">
+        </label> <br>
+        <label class="addLabel">
+            <input type="password" name="password" placeholder="Password:">
+        </label> <br>
+        <label class="addLabel">
+            <input type="number" name="age" placeholder="Age:">
+        </label> <br>
+        <label class="addLabel">
+            <input type="text" name="role" placeholder="Role:">
+        </label> <br>
+        <label class="addLabel">
+            <input type="text" name="email" placeholder="Email:">
+        </label> <br>
+        <label class="addLabel">
+            <input type="text" name="webpage" placeholder="Webpage:">
+        </label> <br>
+
+        <div class="button_container">
+            <!--  buttons for creating and cancelling the action  -->
+            <button type="submit">Add User</button>
+            <button type="reset" onclick="window.location.href='showUsers.html'">Cancel</button>
+        </div>
+
+    </form>
+</div>
+</body>
+
+</html>

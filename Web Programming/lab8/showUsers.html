@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Enterprise System</title>
+    <link rel="stylesheet" type="text/css" href="showUsers.css">
+    <script src="utils/jquery-3.6.0.js"></script>
+    <script src="showUsers.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <h1 id="containerTitle">Users</h1>
+    <div class="details">
+
+        <!--    filtering on the role of the users    -->
+        <label for="role"></label><input type="text" placeholder="Filter by role:" id="role" width=inherit/>
+
+        <!--    filtering on the name of the users    -->
+        <label for="name"></label><input type="text" placeholder="Filter by name:" id="name" width=inherit/>
+
+        <!--    button used to redirect to the form for adding a user    -->
+        <button class="add" onclick="window.location.href='addUser.html'">
+            Add new user
+        </button>
+    </div>
+    <table id="usersTable">
+        <tr>
+            <th onclick="sortTable(0)"> NAME</th>
+            <th onclick="sortTable(1)"> USERNAME</th>
+            <th onclick="sortTable(2)"> AGE</th>
+            <th onclick="sortTable(3)"> ROLE</th>
+            <th onclick="sortTable(4)"> EMAIL</th>
+            <th onclick="sortTable(5)"> WEBPAGE</th>
+            <th onclick="sortTable(6)"> ACTION</th>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
