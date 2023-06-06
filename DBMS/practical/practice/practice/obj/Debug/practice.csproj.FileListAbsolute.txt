@@ -1,0 +1,11 @@
+C:\Users\Irina\source\repos\practice\bin\Debug\practice.exe.config
+C:\Users\Irina\source\repos\practice\bin\Debug\practice.exe
+C:\Users\Irina\source\repos\practice\bin\Debug\practice.pdb
+C:\Users\Irina\source\repos\practice\obj\Debug\practice.csproj.AssemblyReference.cache
+C:\Users\Irina\source\repos\practice\obj\Debug\practice.csproj.SuggestedBindingRedirects.cache
+C:\Users\Irina\source\repos\practice\obj\Debug\practice.Form1.resources
+C:\Users\Irina\source\repos\practice\obj\Debug\practice.Properties.Resources.resources
+C:\Users\Irina\source\repos\practice\obj\Debug\practice.csproj.GenerateResource.cache
+C:\Users\Irina\source\repos\practice\obj\Debug\practice.csproj.CoreCompileInputs.cache
+C:\Users\Irina\source\repos\practice\obj\Debug\practice.exe
+C:\Users\Irina\source\repos\practice\obj\Debug\practice.pdb
